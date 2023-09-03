@@ -6,4 +6,41 @@
 	<select id="getMemberAll">
 		select * from member	
 	</select>
+	
+	<select id="getMemberBySeq" parameterType="com.oliveyoung.web.entity.MemberEntity">
+		select * from member
+		where mseq = #{mseq}
+	</select>
+	
+	<insert id="joinMember" parameterType="com.oliveyoung.web.entity.MemberEntity">
+		insert into member(
+				mid, 
+				mpw, 
+				nickname, 
+				email
+			) 
+			
+			values (
+				#{mid}, 
+				#{mpw}, 
+				#{nickname}, 
+				#{email}
+			)
+	</insert>
+	
+	<select id="checkExist" parameterType="com.oliveyoung.web.entity.MemberEntity">
+		select count(*) from member
+		where mid = #{mid}
+	</select>
+	
+	<select id="checkExistNick" parameterType="com.oliveyoung.web.entity.MemberEntity">
+		select count(*) from member
+		where nickname = #{nickname}
+	</select>
+	
+	<select id="login" parameterType="com.oliveyoung.web.entity.MemberEntity">
+		select * from member 
+		where mid = #{mid}
+		and mpw = #{mpw}
+	</select>
 </mapper>
