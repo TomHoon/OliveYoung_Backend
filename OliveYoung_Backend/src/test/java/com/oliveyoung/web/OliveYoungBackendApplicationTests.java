@@ -1,4 +1,4 @@
-package com.newlecture.web;
+package com.oliveyoung.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
