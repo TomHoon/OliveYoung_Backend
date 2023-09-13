@@ -8,6 +8,11 @@ import com.oliveyoung.web.entity.ProductEntity;
 
 @Mapper
 public interface ProductDao {
+
+    // 제품등록
+    public int productInsert(ProductEntity pEnt);
+
+
 	
 }
 
