@@ -17,30 +17,48 @@
 				mid, 
 				mpw, 
 				nickname, 
-				email
+				email,
+				member_tel,
+				member_address,
+				postcode,
+				detailAddress,
+				extraAddress,
+				member_birth,
+				member_gender,
+				member_grade,
+				member_reg_date
 			) 
 			
 			values (
 				#{mid}, 
 				#{mpw}, 
 				#{nickname}, 
-				#{email}
+				#{email},
+				#{member_tel},
+				#{member_address}, 
+				#{postcode}, 
+				#{detailAddress}, 
+				#{extraAddress}, 
+				#{member_birth},
+				#{member_gender},
+				'baby',
+				now()
 			)
 	</insert>
 	
 	<select id="checkExist" parameterType="com.oliveyoung.web.entity.MemberEntity">
 		select count(*) from member
-		where mid = #{mid}
+		where mid = #{mid} and member_del_yn = 'N'
 	</select>
 	
 	<select id="checkExistNick" parameterType="com.oliveyoung.web.entity.MemberEntity">
 		select count(*) from member
-		where nickname = #{nickname}
+		where nickname = #{nickname} and member_del_yn = 'N'
 	</select>
 	
 	<select id="login" parameterType="com.oliveyoung.web.entity.MemberEntity">
 		select * from member 
 		where mid = #{mid}
-		and mpw = #{mpw}
+		and mpw = #{mpw} and member_del_yn = 'N'
 	</select>
 </mapper>
