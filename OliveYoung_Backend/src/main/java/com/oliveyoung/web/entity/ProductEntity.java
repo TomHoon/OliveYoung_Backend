@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class ProductEntity {
 
-    public int product_idx;
+    public String product_idx;
     public String mid;
     public String product_img;
     public String product_orgin_name;
     public String product_sell_name;
     public String product_orgin_price;
     public String product_sell_price;
-    public Date product_reg_date;
-    public Date product_amnd_date;
+    public String product_reg_date;
+    public String product_amnd_date;
     public String product_del_yn;
     public String product_corp;
     public String product_major_category;
@@ -36,11 +36,11 @@ public class ProductEntity {
     public String product_select_view;
     public Date product_select_date;
 
-    public int getProduct_idx() {
+    public java.lang.String getProduct_idx() {
         return product_idx;
     }
 
-    public void setProduct_idx(int product_idx) {
+    public void setProduct_idx(java.lang.String product_idx) {
         this.product_idx = product_idx;
     }
 
@@ -92,19 +92,19 @@ public class ProductEntity {
         this.product_sell_price = product_sell_price;
     }
 
-    public Date getProduct_reg_date() {
+    public java.lang.String getProduct_reg_date() {
         return product_reg_date;
     }
 
-    public void setProduct_reg_date(Date product_reg_date) {
+    public void setProduct_reg_date(java.lang.String product_reg_date) {
         this.product_reg_date = product_reg_date;
     }
 
-    public Date getProduct_amnd_date() {
+    public java.lang.String getProduct_amnd_date() {
         return product_amnd_date;
     }
 
-    public void setProduct_amnd_date(Date product_amnd_date) {
+    public void setProduct_amnd_date(java.lang.String product_amnd_date) {
         this.product_amnd_date = product_amnd_date;
     }
 

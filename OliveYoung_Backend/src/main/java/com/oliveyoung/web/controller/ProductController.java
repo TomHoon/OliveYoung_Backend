@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.oliveyoung.web.dao.ProductDao;
-import com.oliveyoung.web.entity.MemberEntity;
 import com.oliveyoung.web.entity.ProductEntity;
 
 @RestController
@@ -18,6 +17,12 @@ public class ProductController {
 	@Autowired
 	ProductDao pDao;
 	
+	// 제품리스트
+	@PostMapping("/productAll")
+	public List<ProductEntity> productAll(@RequestBody ProductEntity pEnt) {
+		List<ProductEntity> list = pDao.productAll(pEnt);
+		return list;
+	}
 	// 제품등록
     @PostMapping("/productInsert")
 	public int productInsert(@RequestBody ProductEntity pEnt) {

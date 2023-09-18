@@ -9,6 +9,9 @@ import com.oliveyoung.web.entity.ProductEntity;
 @Mapper
 public interface ProductDao {
 
+    // 제품리스트
+    public List<ProductEntity> productAll(ProductEntity pEnt);
+    
     // 제품등록
     public int productInsert(ProductEntity pEnt);
 
