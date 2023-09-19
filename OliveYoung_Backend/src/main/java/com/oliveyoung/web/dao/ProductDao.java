@@ -10,7 +10,7 @@ import com.oliveyoung.web.entity.ProductEntity;
 public interface ProductDao {
 
     // 제품리스트
-    public List<ProductEntity> productAll(ProductEntity pEnt);
+    public List<ProductEntity> productList();
     
     // 제품등록
     public int productInsert(ProductEntity pEnt);

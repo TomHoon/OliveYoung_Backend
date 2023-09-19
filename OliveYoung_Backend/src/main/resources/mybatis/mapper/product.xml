@@ -13,7 +13,7 @@
 		#{product_amount}, #{product_func}, #{product_limit}, #{product_way}, #{product_manufacturer}, #{product_produce_country}, 
 		#{product_ingredient}, #{product_evaluate}, #{product_attention}, #{quality_standard}, #{consultation_number});
 	</insert>
-	<select id="productAll" parameterType="com.oliveyoung.web.entity.ProductEntity" resultType="com.oliveyoung.web.entity.ProductEntity">
-		select * from product_tb
+	<select id="productList" resultType="com.oliveyoung.web.entity.ProductEntity">
+		select * from product_tb order by product_idx desc
 	</select>
 </mapper>

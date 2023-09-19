@@ -18,9 +18,9 @@ public class ProductController {
 	ProductDao pDao;
 	
 	// 제품리스트
-	@PostMapping("/productAll")
-	public List<ProductEntity> productAll(@RequestBody ProductEntity pEnt) {
-		List<ProductEntity> list = pDao.productAll(pEnt);
+	@PostMapping("/productList")
+	public List<ProductEntity> productList() {
+		List<ProductEntity> list = pDao.productList();
 		return list;
 	}
 	// 제품등록
