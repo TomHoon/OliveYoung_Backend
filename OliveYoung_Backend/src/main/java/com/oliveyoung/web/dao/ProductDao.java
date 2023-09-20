@@ -15,7 +15,7 @@ public interface ProductDao {
     // 제품등록
     public int productInsert(ProductEntity pEnt);
 
-
+    public ProductEntity getProduct(ProductEntity pEnt);
 	
 }
 

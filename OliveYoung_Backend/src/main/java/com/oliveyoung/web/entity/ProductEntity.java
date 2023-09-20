@@ -43,6 +43,7 @@ public class ProductEntity {
     public String product_rcm1_pk;
     public String product_rcm2_pk;
     public String product_rcm3_pk;
+    public String product_sub_img;
     
 
     public java.lang.String getProduct_idx() {
@@ -356,7 +357,16 @@ public class ProductEntity {
 	public void setProduct_rcm3_pk(String product_rcm3_pk) {
 		this.product_rcm3_pk = product_rcm3_pk;
 	}
+
+	public String getProduct_sub_img() {
+		return product_sub_img;
+	}
+
+	public void setProduct_sub_img(String product_sub_img) {
+		this.product_sub_img = product_sub_img;
+	}
     
     
 }
+
 

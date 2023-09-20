@@ -30,7 +30,37 @@
 		select * from product_tb order by product_idx desc
 	</select>
 	
-	<insert id="productInsert2" parameterType="com.oliveyoung.web.entity.ProductEntity">
-		
+	<select id="getProduct" resultType="com.oliveyoung.web.entity.ProductEntity">
+		select * from product_tb
+		where product_idx = #{product_idx}
+	</select>
+	
+	<insert id="productInsert" parameterType="com.oliveyoung.web.entity.ProductEntity">
+		insert into product_tb(
+				product_orgin_name,
+				product_sell_name,
+				product_orgin_price,
+				product_sell_price,
+				product_prev_img,
+				product_main_img,
+				product_desc1_img,
+				product_desc2_img,
+				product_desc3_img,
+				product_sub_img
+			) 
+			values (
+				#{product_orgin_name},
+				#{product_sell_name},
+				#{product_orgin_price},
+				#{product_sell_price},
+				#{product_prev_img},
+				#{product_main_img},
+				#{product_desc1_img},
+				#{product_desc2_img},
+				#{product_desc3_img},
+				#{product_sub_img}
+			);
 	</insert>
+	
+	
 </mapper>
