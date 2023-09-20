@@ -2,18 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.oliveyoung.web.dao.ProductDao">
 
-	<insert id="productInsert" parameterType="com.oliveyoung.web.entity.ProductEntity">
-		insert into product_tb (product_img, product_orgin_name, product_sell_name, product_orgin_price, product_sell_price, 
-		product_reg_date, product_corp, product_major_category, product_middle_category, product_small_category, product_cnt, 
-		product_amount, product_func, product_limit, product_way, product_manufacturer, product_produce_country, 
-		product_ingredient, product_evaluate, product_attention, quality_standard, consultation_number)
+<!--	<insert id="productInsert" parameterType="com.oliveyoung.web.entity.ProductEntity">
+		insert into product_tb (
+			product_img, product_orgin_name, product_sell_name,
+			product_orgin_price, product_sell_price, product_reg_date,
+			product_corp, product_major_category, product_middle_category, 
+			product_small_category, product_cnt, 
+			product_amount, product_func, product_limit, 
+			product_way, product_manufacturer, product_produce_country, 
+			product_ingredient, product_evaluate, product_attention, 
+			quality_standard, consultation_number
+		)
 		values
-		(#{product_img}, #{product_orgin_name}, #{product_sell_name}, #{product_orgin_price}, #{product_sell_price}, 
-		now(), #{product_corp}, #{product_major_category}, #{product_middle_category}, #{product_small_category}, #{product_cnt}, 
-		#{product_amount}, #{product_func}, #{product_limit}, #{product_way}, #{product_manufacturer}, #{product_produce_country}, 
-		#{product_ingredient}, #{product_evaluate}, #{product_attention}, #{quality_standard}, #{consultation_number});
-	</insert>
+		(
+			#{product_img}, #{product_orgin_name}, #{product_sell_name}, 
+			#{product_orgin_price}, #{product_sell_price}, 
+			now(), #{product_corp}, #{product_major_category}, 
+			#{product_middle_category}, #{product_small_category}, 
+			#{product_cnt}, #{product_amount}, #{product_func}, 
+			#{product_limit}, #{product_way}, #{product_manufacturer}, 
+			#{product_produce_country}, #{product_ingredient}, 
+			#{product_evaluate}, #{product_attention}, 
+			#{quality_standard}, #{consultation_number}
+		);
+	</insert>-->
 	<select id="productList" resultType="com.oliveyoung.web.entity.ProductEntity">
 		select * from product_tb order by product_idx desc
 	</select>
+	
+	<insert id="productInsert2" parameterType="com.oliveyoung.web.entity.ProductEntity">
+		
+	</insert>
 </mapper>

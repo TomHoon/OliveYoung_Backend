@@ -35,6 +35,15 @@ public class ProductEntity {
     public String consultation_number;
     public String product_select_view;
     public Date product_select_date;
+    public String product_prev_img;
+    public String product_main_img;
+    public String product_desc1_img;
+    public String product_desc2_img;
+    public String product_desc3_img;
+    public String product_rcm1_pk;
+    public String product_rcm2_pk;
+    public String product_rcm3_pk;
+    
 
     public java.lang.String getProduct_idx() {
         return product_idx;
@@ -152,7 +161,7 @@ public class ProductEntity {
         return product_cnt;
     }
 
-    public void setProduct_cnt(java.lang.String product_cnt) {
+    public void setProduct_cnt(String product_cnt) {
         this.product_cnt = product_cnt;
     }
 
@@ -283,4 +292,71 @@ public class ProductEntity {
     public void setProduct_select_date(Date product_select_date) {
         this.product_select_date = product_select_date;
     }
+
+	public String getProduct_prev_img() {
+		return product_prev_img;
+	}
+
+	public void setProduct_prev_img(String product_prev_img) {
+		this.product_prev_img = product_prev_img;
+	}
+
+	public String getProduct_main_img() {
+		return product_main_img;
+	}
+
+	public void setProduct_main_img(String product_main_img) {
+		this.product_main_img = product_main_img;
+	}
+
+	public String getProduct_desc1_img() {
+		return product_desc1_img;
+	}
+
+	public void setProduct_desc1_img(String product_desc1_img) {
+		this.product_desc1_img = product_desc1_img;
+	}
+
+	public String getProduct_desc2_img() {
+		return product_desc2_img;
+	}
+
+	public void setProduct_desc2_img(String product_desc2_img) {
+		this.product_desc2_img = product_desc2_img;
+	}
+
+	public String getProduct_desc3_img() {
+		return product_desc3_img;
+	}
+
+	public void setProduct_desc3_img(String product_desc3_img) {
+		this.product_desc3_img = product_desc3_img;
+	}
+
+	public String getProduct_rcm1_pk() {
+		return product_rcm1_pk;
+	}
+
+	public void setProduct_rcm1_pk(String product_rcm1_pk) {
+		this.product_rcm1_pk = product_rcm1_pk;
+	}
+
+	public String getProduct_rcm2_pk() {
+		return product_rcm2_pk;
+	}
+
+	public void setProduct_rcm2_pk(String product_rcm2_pk) {
+		this.product_rcm2_pk = product_rcm2_pk;
+	}
+
+	public String getProduct_rcm3_pk() {
+		return product_rcm3_pk;
+	}
+
+	public void setProduct_rcm3_pk(String product_rcm3_pk) {
+		this.product_rcm3_pk = product_rcm3_pk;
+	}
+    
+    
 }
+
