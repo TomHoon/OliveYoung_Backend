@@ -44,6 +44,7 @@ public class ProductEntity {
     public String product_rcm2_pk;
     public String product_rcm3_pk;
     public String product_sub_img;
+    public String product_brand_name;
     
 
     public java.lang.String getProduct_idx() {
@@ -364,6 +365,14 @@ public class ProductEntity {
 
 	public void setProduct_sub_img(String product_sub_img) {
 		this.product_sub_img = product_sub_img;
+	}
+
+	public String getProduct_brand_name() {
+		return product_brand_name;
+	}
+
+	public void setProduct_brand_name(String product_brand_name) {
+		this.product_brand_name = product_brand_name;
 	}
     
     
