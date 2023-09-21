@@ -17,16 +17,16 @@ public class ReviewController {
 	@Autowired
 	ReviewDao rDao;
 	
-	// 제품리스트
+	// 리뷰리스트
 	@GetMapping("/reviewList")
 	public List<ReviewEntity> reviewList() {
 		List<ReviewEntity> list = rDao.reviewList();
 		return list;
 	}
 	
-	// 제품등록
+	// 리뷰등록
     @PostMapping("/reviewInsert")
-	public int productInsert(@RequestBody ReviewEntity rEnt) {
+	public int reviewInsert(@RequestBody ReviewEntity rEnt) {
 		int result = rDao.reviewInsert(rEnt);
 		return result;
 	}
