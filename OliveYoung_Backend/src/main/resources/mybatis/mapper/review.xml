@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oliveyoung.web.dao.ReviewDao">
+
+	<insert id="reviewInsert" parameterType="com.oliveyoung.web.entity.ReviewEntity">
+	   insert into product (
+		mid,product_sell_name,review_img,review_content,
+		   review_reg_date,review_score,review_report
+	   )
+	   values
+	   (
+		   #{mid}, #{product_sell_name}, #{review_img}, #{review_content},
+			now(), #{review_score}, #{review_report}
+	   );
+    </insert>
+	<select id="reviewList" resultType="com.oliveyoung.web.entity.ReviewEntity">
+		select * from review order by review_idx desc
+	</select>
+
+</mapper>
