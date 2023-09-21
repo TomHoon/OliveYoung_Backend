@@ -3,7 +3,7 @@
 <mapper namespace="com.oliveyoung.web.dao.ReviewDao">
 
 	<insert id="reviewInsert" parameterType="com.oliveyoung.web.entity.ReviewEntity">
-	   insert into product (
+	   insert into review (
 		mid,product_sell_name,review_img,review_content,
 		   review_reg_date,review_score,review_report
 	   )
@@ -14,7 +14,10 @@
 	   );
     </insert>
 	<select id="reviewList" resultType="com.oliveyoung.web.entity.ReviewEntity">
-		select * from review order by review_idx desc
+		select product_sell_name,review_img,review_content,avg(review_score),review_report
+		from review
+		group by product_sell_name,review_img,review_content,review_report
+		order by review_idx desc;
 	</select>
 
 </mapper>
