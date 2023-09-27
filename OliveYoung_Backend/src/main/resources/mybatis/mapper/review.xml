@@ -12,9 +12,9 @@
 	   );
     </insert>
 	<select id="reviewList" resultType="com.oliveyoung.web.entity.ReviewEntity">
-		select product_sell_name,review_img,review_content,avg(review_score),review_report
+		select product_sell_name,review_img,review_content,review_score,review_report
 		from review
-		group by product_sell_name,review_img,review_content,review_report
+		group by product_sell_name,review_img,review_content,review_score,review_report
 		order by review_idx desc;
 	</select>
 
