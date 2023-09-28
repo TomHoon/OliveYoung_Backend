@@ -4,15 +4,23 @@
 
 	<insert id="reviewInsert" parameterType="com.oliveyoung.web.entity.ReviewEntity">
 	   insert into review (
-		mid,product_sell_name,review_img,review_content, review_reg_date,review_score,review_report
+		mid,product_sell_name,review_img,review_content, 
+		review_reg_date,review_score,review_report
 	   )
 	   values
 	   (
-		   #{mid}, #{product_sell_name}, #{review_img}, #{review_content}, now(), #{review_score}, #{review_report}
+		   #{mid}, #{product_sell_name}, 
+		   #{review_img}, #{review_content},
+		   now(), #{review_score}, 
+		   #{review_report}
 	   );
     </insert>
 	<select id="reviewList" resultType="com.oliveyoung.web.entity.ReviewEntity">
-		select product_sell_name,review_img,review_content,avg(review_score),review_report
+		select 
+			product_sell_name,review_img,
+			review_content,avg(review_score),
+			review_score,
+			review_report
 		from review
 		group by product_sell_name,review_img,review_content,review_report
 		order by review_idx desc;
