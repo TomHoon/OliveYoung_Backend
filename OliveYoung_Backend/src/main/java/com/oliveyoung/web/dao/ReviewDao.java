@@ -10,7 +10,7 @@ import com.oliveyoung.web.entity.ReviewEntity;
 public interface ReviewDao {
 
     // 제품리스트
-    public List<ReviewEntity> reviewList();
+    public List<ReviewEntity> reviewList(ReviewEntity rEnt);
     
     // 제품등록
     public int reviewInsert(ReviewEntity rEnt);

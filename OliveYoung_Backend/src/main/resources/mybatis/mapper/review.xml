@@ -18,11 +18,11 @@
 	<select id="reviewList" resultType="com.oliveyoung.web.entity.ReviewEntity">
 		select 
 			product_sell_name,review_img,
-			review_content,avg(review_score),
+			review_content,
 			review_score,
-			review_report
+			review_report, review_reg_date, mid, review_del_yn
 		from review
-		group by product_sell_name,review_img,review_content,review_report
+		where product_sell_name = #{product_sell_name} and review_del_yn = 'N'
 		order by review_idx desc;
 	</select>
 

@@ -18,9 +18,9 @@ public class ReviewController {
 	ReviewDao rDao;
 	
 	// 리뷰리스트
-	@GetMapping("/reviewList")
-	public List<ReviewEntity> reviewList() {
-		List<ReviewEntity> list = rDao.reviewList();
+	@PostMapping("/reviewList")
+	public List<ReviewEntity> reviewList(@RequestBody ReviewEntity rEnt) {
+		List<ReviewEntity> list = rDao.reviewList(rEnt);
 		return list;
 	}
 	
